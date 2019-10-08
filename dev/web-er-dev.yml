@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: web-application
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    #content-type: text/html
+    mode: HTML5
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+feign:
+  # 启用 feign 的 hystrix断路器  
+  hystrix:
+    enabled: true
+#feign的超时时间、重试
+ribbon:
+  ReadTimeout: 2000
+  ConnectTimeout: 2000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: true
+  restclient:
+    enabled: true
+server:
+  port: 9600
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+#请求处理的超时时间
+            timeoutInMilliseconds:  100000
+          semaphore:
+            maxConcurrentRequests: 10000
+        circuitBreaker:
+          sleepWindowInMilliseconds:  5000
+#熔断器失败的个数==进入熔断器的请求达到1000时服务降级（之后的请求直接进入熔断器）
+          requestVolumeThreshold: 1000
+  threadpool:
+    default:
+      coreSize: 10
+      maxQueueSize: 1500
+      queueSizeRejectionThreshold: 1000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*" 
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/nmyslog/nmys
+  
