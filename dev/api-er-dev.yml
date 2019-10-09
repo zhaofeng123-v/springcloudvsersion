@@ -4,9 +4,9 @@ spring:
   zipkin:
     base-url: http://localhost:9411
   datasource:
-    url: jdbc:mysql://192.168.60.86:3306/oa
-    username: sbsoa
-    password: sbsoa@S098
+    url: jdbc:mysql://192.168.60.94:3306/ksxt
+    username: ksxt_admin
+    password: Passw0rd!
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
