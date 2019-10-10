@@ -7,11 +7,6 @@ spring:
     encoding: UTF-8
     #content-type: text/html
     mode: HTML5
-  rabbitmq:
-      host: localhost
-      port: 5672
-      username: guest
-      password: guest
 feign:
   # 启用 feign 的 hystrix断路器  
   hystrix:
