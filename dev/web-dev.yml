@@ -50,5 +50,5 @@ management:
         allowed-methods: "*" 
 logging:
   config: classpath:logback-spring.xml
-  path: D:/nmyslog/nmys
+  path: E:/nmyslog/nmys
   
