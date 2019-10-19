@@ -13,7 +13,7 @@ spring:
     min-idle: 5
     initial-size: 5
   redis:
-    host: 127.0.0.1
+    host: 192.168.60.92
     timeout: 3000
     expire: 1800
     password:
