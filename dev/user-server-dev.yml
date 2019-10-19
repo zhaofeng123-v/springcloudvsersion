@@ -32,7 +32,7 @@ logging:
   level:
     com.sbs.provider.dao: debug
   config: classpath:logback-spring.xml
-  path: D:/nmyslog/user
+  path: E:/nmyslog/user
 session:
   redis:
     expireTime: 3600
