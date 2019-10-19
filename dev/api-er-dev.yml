@@ -31,13 +31,6 @@ spring:
    show-sql: true
   jms: 
     pub-sub-domain: false #默认情况下activemq提供的是queue模式，若要使用topic模式需要配置pub-sub-domain为true
-  rabbitmq:
-      host: localhost
-      port: 5672
-      username: guest
-      password: guest
-      publisher-confirms: true
-      publisher-returns: true
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:
