@@ -18,7 +18,7 @@ spring:
     host: 192.168.60.92
     timeout: 3000
     expire: 1800
-    password:
+    password: 123456
     port: 6379
     database: 5
     jedis:
